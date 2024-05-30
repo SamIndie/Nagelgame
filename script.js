@@ -6,9 +6,9 @@ const buttnGold = document.querySelector('.gold');
 const buttnFlwrs = document.querySelector('.decorflwrs');
 const buttnFlame = document.querySelector('.decorflame');
 const buttnSmoothy = document.querySelector('.decorsmthy');
-const audio = new Audio('audio/magic-wand-6214.mp3');
-const buttnDone = document.getElementById('buttnDone');
-const messageDiv = document.getElementById('message'); 
+const audio = new Audio('audio/magic-wand-6214.mp3'); //bron uitleg audio code: Franks laboratory. (2021, 12 maart). JavaScript audio CRASH COURSE for beginners [Video]. YouTube. https://www.youtube.com/watch?v=VXWvfrmpapI 0-4:31min, bron audio:https://pixabay.com/sound-effects/search/magic/
+const buttnDone = document.getElementById('buttnDone');//bron:Document.getElementById() method - Web APIs | MDN. (2023, 21 december). MDN Web Docs. https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+const messageDiv = document.getElementById('message');
 
 // Kleur en decor variabelen
 let frenchColor = false;
@@ -20,7 +20,7 @@ let flower = false;
 let smoothy = false;
 
 // Deze function zorgt ervoor dat wanneer een nieuwe kleur wordt geselecteerd, de vorige kleurselectie wordt gewist, waardoor een consistente status behouden blijft
-function resetColors() {  
+function resetColors() {  //bron: HTMLFormElement: reset() method - Web APIs | MDN. (2023b, april 7). MDN Web Docs. https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
     frenchColor = false;
     taupe = false;
     zilver = false;
@@ -28,28 +28,28 @@ function resetColors() {
 }
 
 // Kleur functions
-function french() {
+function french() { //bron image: IMGBIN.com. (z.d.-c). Franske Negle Manicure Nail Art Artificial Nails Nail Polish PNG - Free download. https://imgbin.com/png/WVEck3VZ/franske-negle-manicure-nail-art-artificial-nails-nail-polish-png
     defaultImg.src = "images/hand.png";
-    resetColors(); 
+    resetColors();
     frenchColor = true;
     clearMessage();
 }
 
-function fullTaupe() {
+function fullTaupe() {//bron image:IMGBIN.com. (z.d.-b). Artificial Nails Nail Art Nail Polish Manicure PNG - Free download. https://imgbin.com/png/GZgNMUcR/artificial-nails-nail-art-nail-polish-manicure-png
     defaultImg.src = "images/taupefull.png";
     resetColors();
     taupe = true;
     clearMessage();
 }
 
-function fullZilver() {
+function fullZilver() {//bron image:IMGBIN.com. (z.d.). Artificial Nails Nail Art Nail Polish Manicure PNG - Free download. https://imgbin.com/png/tD4nUQt4/artificial-nails-nail-art-nail-polish-manicure-png
     defaultImg.src = "images/fullzilver.png";
     resetColors();
     zilver = true;
     clearMessage();
 }
 
-function fullGold() {
+function fullGold() {//bron image:IMGBIN.com. (z.d.-d). Nail Polish Manicure Artificial Nails Nail Art PNG - free download. https://imgbin.com/png/EH4axsmT/nail-polish-manicure-artificial-nails-nail-art-png
     defaultImg.src = "images/fullgold.png";
     resetColors();
     gold = true;
@@ -62,13 +62,13 @@ function clearMessage() {
 }
 
 // Show message function
-function showMessage(msg) {
+function showMessage(msg) { //medestudent Jillian heeft deels geholpen met deze code
     messageDiv.textContent = msg;
 }
 
 // Combinaties met decor 
-function decorFlame() {
-    if (!frenchColor && !taupe && !zilver && !gold) {
+function decorFlame() { //bron image decor: Dynamic red fire flame with flickering lines - Unlimited Download. cleanpng.com. (z.d.). cleanpng.com. https://www.cleanpng.com/png-orange-dynamic-red-fire-flame-with-flickering-line-8069732/
+    if (frenchColor && taupe && zilver && gold) { //medestudent Jillian heeft deels geholpen met deze code
         showMessage('Please select a color first.');
         return;
     }
@@ -86,8 +86,8 @@ function decorFlame() {
     smoothy = false;
 }
 
-function decorFlowers() {
-    if (!frenchColor && !taupe && !zilver && !gold) {
+function decorFlowers() { 
+    if (frenchColor && taupe && zilver && gold) {
         showMessage('Please select a color first.');
         return;
     }
@@ -105,7 +105,7 @@ function decorFlowers() {
     smoothy = false;
 }
 
-function decorSmoothy() {
+function decorSmoothy() { //bron image decor: Juice Background - Unlimited download. Cleanpng.com. (z.d.). cleanpng.com. https://www.cleanpng.com/png-juice-smoothie-pineapple-drawing-fruit-pineapple-73173/
     if (!frenchColor && !taupe && !zilver && !gold) {
         showMessage('Please select a color first.');
         return;
@@ -132,6 +132,6 @@ buttnGold.addEventListener('click', fullGold);
 buttnFlame.addEventListener('click', decorFlame);
 buttnFlwrs.addEventListener('click', decorFlowers);
 buttnSmoothy.addEventListener('click', decorSmoothy);
-buttnDone.addEventListener('click', function() {
+buttnDone.addEventListener('click', function () {
     audio.play();
 });
