@@ -1,0 +1,101 @@
+
+
+h1,h2{
+    color: purple;
+    font-family: cursive;
+}
+
+
+.interactionbttns{
+    padding-left: 2em;
+ 
+}
+
+.french{
+    font-size: larger;
+    padding: 1em;
+    background-color: beige;
+    color: burlywood;
+    border-radius: 30px;
+    border-color: bisque;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* bron:([CSS] - How To Add A Shadow To A Button in CSS, z.d.)*/
+    
+}
+
+.fullcover{
+    font-size: larger;
+    padding: 1em;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.gold{
+    font-size: larger;
+    padding: 1em;
+    background:goldenrod;
+    color:brown;
+    border-radius: 50px;
+    border-color: whitesmoke;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.taupe{
+    font-size: larger;
+    padding: 1em;
+    background: rgba(220, 167, 176);
+    color:chocolate;
+    border-radius: 50px;
+    border-color: rgba(220, 167, 176);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.zilver{
+    font-size: larger;
+    padding: 1em;
+    background:silver;
+    color:whitesmoke;
+    border-radius: 50px;
+    border-color:dimgray;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.yellow{
+    font-size: larger;
+    padding: 1em;
+    background: yellow;
+    color:goldenrod;
+    border-radius: 50px;
+    border-color: yellow;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.decor{
+    width: 50px;
+}
+body{ /* met behulp van Jillian Wong (medestudent)*/
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    background-image: url('images/backgroundbody.png'); /* CSS confusion about background-image in body element. (z.d.). Stack Overflow. https://stackoverflow.com/questions/46096365/css-confusion-about-background-image-in-body-element*/
+}
+
+#buttnDone{
+    margin-top: 1em;
+    padding: 1em;
+    background-color:darksalmon;
+    font-size: larger;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 50px;
+    border-color:palevioletred;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+#message{
+    font-size: x-large;
+    color:orangered;
+    margin-top: 0.5em;
+  
+}
